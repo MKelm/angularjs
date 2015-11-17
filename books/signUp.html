@@ -1,0 +1,36 @@
+<div class="scrollable">
+ <div class="scrollable-content section">
+   
+  <form role="form" ng-submit="signUp()">
+    <fieldset>
+        <div class="form-group">
+          <input type="text" 
+            ng-model="user.useremail"
+            class="form-control"
+            placeholder="E-Mail">
+        </div>
+
+        <div class="form-group">
+          <input type="password" 
+            ng-model="user.password"
+            class="form-control"
+            placeholder="Password">
+        </div>
+            
+        <div class="form-group">
+          <input type="password" 
+            ng-model="user.password2"
+            class="form-control"
+            placeholder="Repeat Password">
+        </div>
+    </fieldset>
+
+    <button class="btn btn-primary" 
+      ng-disabled="user.useremail==undefined||user.useremail=='' || user.password=='' || user.password==undefined || user.password2=='' 
+      || user.password2==undefined || user.password != user.password2">
+      SignUp
+    </button>
+    
+  </form>
+ </div>
+</div>

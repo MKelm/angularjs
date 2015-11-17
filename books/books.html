@@ -1,0 +1,16 @@
+<div class="scrollable">
+ <div class="scrollable-content section">
+
+  <h1>Books</h1>
+ 
+  <div class="list-group">
+    <div ng-repeat="(id, book) in booksArr | filter:query | orderBy: orderProp" class="list-group-item">
+      <span>{{book.author}}</span>
+      <span>"{{book.title}}"</span>
+      <span ng-show="editMode"><a href="" ng-click="deleteBook(id)">Delete</a></span>
+      <span ng-show="editMode"><a href="" ng-click="editBook(id)">Edit</a></span>
+    </div>
+  </div>
+  <p>Total number of books: {{booksArr.length}}</p>
+  
+</div>

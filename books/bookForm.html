@@ -1,0 +1,49 @@
+<div class="scrollable">
+ <div class="scrollable-content section">
+ 
+    <h1 ng-show="!editMode">Add book</h1>
+    <h1 ng-show="editMode">Edit book</h1>
+       
+    <div class="alert alert-success" role="alert" ng-show="activeBookId == -1 && formSubmit && formSuccess">Book {{ lastActiveBookString }} has been added!</div>
+    <div class="alert alert-danger" role="alert" ng-show="activeBookId == -1 && formSubmit && !formSuccess">Book has not been added!</div>
+    
+    <form role="form" ng-submit="submitBook()">
+      <fieldset>
+          <div class="form-group">
+            <input type="text" 
+              ng-model="book.isbn"
+              class="form-control"
+              placeholder="ISBN">
+            <p class="help-block">Example: 978-3-86680-192-1</p>
+          </div>
+
+          <div class="form-group">
+            <input type="text" 
+              ng-model="book.author"
+              class="form-control"
+              placeholder="Author">
+          </div>
+          
+          <div class="form-group">
+            <input type="text" 
+              ng-model="book.title"
+              class="form-control"
+              placeholder="Title">
+          </div>
+      </fieldset>
+      
+      <a ng-show="!editMode" class="btn btn-primary" href="#/userHome">Back</a>
+      <a ng-show="editMode" class="btn btn-primary" href="#/books/edit">Back</a>
+
+      <button class="btn btn-primary" ng-show="editMode"
+        ng-disabled="submitBookDisabled()">
+        Edit
+      </button>
+      <button class="btn btn-primary" ng-show="!editMode"
+        ng-disabled="submitBookDisabled()">
+        Add
+      </button>
+    </form>
+    
+  </div>
+</div>
