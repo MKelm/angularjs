@@ -1,0 +1,30 @@
+<div class="scrollable">
+ <div class="scrollable-content section">
+ 
+    <h2>Documents</h2> 
+    
+    <form role="form">
+      <fieldset>
+        <div class="form-group">
+          <input type="text" 
+            ng-model="activeFolder"
+            class="form-control"
+            placeholder="Folder"
+            disabled="disabled">
+        </div>
+      </fieldset>
+    </form>
+ 
+    <div class="list-group">
+      <div ng-repeat="(id, doc) in docsObj | filter:query | orderBy: orderProp" class="list-group-item">
+        <span>"{{doc.title}}"</span>
+        <span><a class="btn btn-default btn-xs" href="" ng-click="deleteDoc(id)" role="button">Delete</a></span>
+        <span><a class="btn btn-default btn-xs" href="" ng-click="editDoc(id)" role="button">Edit</a></span>
+      </div>
+      <div class="list-group-item">
+        <a class="btn btn-primary" href="#/doc/new" role="button">New document</a>
+      </div>
+    </div>
+    
+  </div>
+</div>

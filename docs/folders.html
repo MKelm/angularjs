@@ -1,0 +1,37 @@
+<div class="scrollable">
+ <div class="scrollable-content section">
+    
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Private folders</h2>
+          <div class="list-group">
+            <div ng-repeat="(id, folder) in privateFolders" class="list-group-item">
+              <span>"{{folder.title}}"</span>
+              <span><a class="btn btn-default btn-xs" href="" ng-click="deleteFolder(id, false)" role="button">Delete</a></span>
+              <span><a class="btn btn-default btn-xs" href="" ng-click="editFolder(id, false)" role="button">Edit</a></span>
+              <span><a class="btn btn-default btn-xs" href="" ng-click="selectFolder(id, false)" role="button">Select</a></span>
+            </div>
+            <div class="list-group-item">
+              <a class="btn btn-primary" href="#/folder/newPrivate" role="button">New private folder</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h2>Public folders</h2>
+          <div class="list-group">
+            <div ng-repeat="(id, folder) in publicFolders" class="list-group-item">
+              <span>"{{folder.title}}"</span>
+              <span><a class="btn btn-default btn-xs" href="" ng-click="deleteFolder(id)" role="button">Delete</a></span>
+              <span><a class="btn btn-default btn-xs" href="" ng-click="editFolder(id)" role="button">Edit</a></span>
+              <span><a class="btn btn-default btn-xs" href="" ng-click="selectFolder(id)" role="button">Select</a></span>
+            </div>
+            <div class="list-group-item">
+              <a class="btn btn-primary" href="#/folder/newPublic" role="button">New public folder</a>
+            </div>
+          </div>
+        </div>
+    </div>
+    
+  </div>
+</div>

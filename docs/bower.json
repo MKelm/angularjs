@@ -1,0 +1,27 @@
+{
+  "name": "AngularJS Docs",
+  "version": "0.1",
+  "homepage": "https://github.com/MKelm/angularjs",
+  "authors": [
+    "Martin Kelm <martinkelm@shrt.ws>"
+  ],
+  "description": "AngularJS Firebase App Docs",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+   "dependencies": {
+    "angular": "*",
+    "angular-route": "*",
+    "angular-touch": "*",
+    "firebase": "*",
+    "angularfire": "*",
+    "mobile-angular-ui": "*"
+  }
+}
