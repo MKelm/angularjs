@@ -19,6 +19,7 @@
    "dependencies": {
     "angular": "*",
     "angular-route": "*",
+    "angular-touch": "*",
     "firebase": "*",
     "angularfire": "*",
     "mobile-angular-ui": "*"

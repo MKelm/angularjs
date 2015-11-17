@@ -1,5 +1,6 @@
 var app = angular.module('BooksApp', [
   "ngRoute",
+  "ngTouch",
   "mobile-angular-ui",
   "firebase"
 ]);
